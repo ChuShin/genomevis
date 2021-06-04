@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/genomevis/static/css/main.528649a4.chunk.css",
+    "main.js": "/genomevis/static/js/main.391f85f3.chunk.js",
+    "main.js.map": "/genomevis/static/js/main.391f85f3.chunk.js.map",
+    "runtime-main.js": "/genomevis/static/js/runtime-main.15baefda.js",
+    "runtime-main.js.map": "/genomevis/static/js/runtime-main.15baefda.js.map",
+    "static/js/2.ebceafde.chunk.js": "/genomevis/static/js/2.ebceafde.chunk.js",
+    "static/js/2.ebceafde.chunk.js.map": "/genomevis/static/js/2.ebceafde.chunk.js.map",
+    "index.html": "/genomevis/index.html",
+    "static/css/main.528649a4.chunk.css.map": "/genomevis/static/css/main.528649a4.chunk.css.map",
+    "static/js/2.ebceafde.chunk.js.LICENSE.txt": "/genomevis/static/js/2.ebceafde.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.15baefda.js",
+    "static/js/2.ebceafde.chunk.js",
+    "static/css/main.528649a4.chunk.css",
+    "static/js/main.391f85f3.chunk.js"
+  ]
+}
