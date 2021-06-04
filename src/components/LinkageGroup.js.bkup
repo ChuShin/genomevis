@@ -1,0 +1,62 @@
+import React, { Component } from 'react'
+import '../App.css'
+import { scaleLinear } from 'd3-scale'
+import { max } from 'd3-array'
+import { csv } from 'd3-fetch'
+import { select } from 'd3-selection'
+
+class LinkageGroup extends Component {
+  constructor(props){
+    super(props)
+    this.createLG = this.createLG.bind(this)
+  }
+  componentDidMount() {
+    this.createLG()
+  }
+  componentDidUpdate() {
+    this.createLG()
+  }
+  createLG() {
+    const node = this.node
+    const dataMax = max(this.props.data)
+    const yScale = scaleLinear()
+        .domain([0, dataMax])
+        .range([0, this.props.size[1]])
+//    let mydata = []
+
+    csv("/data/lr26_small.csv", function(d) {
+      console.log(d.cm);
+//      mydata = data;
+    })
+
+   select(node)
+      .selectAll('line')
+      .data(this.props.data)
+      .enter()
+      .append('line')
+
+   select(node)
+      .selectAll('line')
+      .data(this.props.data)
+      .exit()
+      .remove()
+
+   select(node)
+      .selectAll('line')
+      .data(this.props.data)
+      .style('stroke', '#fe9922')
+      .attr('x1', d => yScale(d)-10)
+      .attr('y1', 50)
+      .attr('x2', d => yScale(d)-10)
+      .attr('y2', 100)
+      .attr('stroke-width', 5)
+
+   }
+render() {
+      return <svg className='LGLinear' width={500} height={500}>
+      <g className='LG' ref={node => this.node = node}></g>
+      <rect x="0" y="0" width="100" height="100" />
+      </svg>
+   }
+}
+export default LinkageGroup
