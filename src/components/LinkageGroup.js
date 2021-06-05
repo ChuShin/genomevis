@@ -44,7 +44,7 @@ class LinkageGroup extends Component {
     const node = this.node
     const width = this.props.size[1]
 //    const genetic_map = csv('/data/LR74_scores.csv', d => ({
-    const genetic_map = csv('/data/LR26_dmap_input.csv', d => ({
+    const genetic_map = csv('./genomevis/data/LR26_dmap_input.csv', d => ({
       distance: +d.cm,
       lgroup: d.lg,
       rb_chr: d.rb_chr.split(':')[0]
